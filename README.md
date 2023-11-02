@@ -18,20 +18,27 @@
 
 •	Implemente recursos de filtragem e ordenação para ajudar os usuários a organizar suas tarefas.
 
+Idéia de Design:
+https://www.canva.com/design/DAFzAXafkVk/6wyTJ2HH6EeSd_14010zVw/edit?utm_content=DAFzAXafkVk&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
 Desenvolvimento do Projeto: 
 
 01/11/2023
 
 -[x] Sincronizar Projeto Físico na Nuvem GitHub
 -[x] Definir por cima as etapas dos projetos com definições diárias de Progresso
--[ ] Commitar os arquivos iniciais 
--[ ] Buscar Layouts de Inspiração
+
+
 
 02/11/2023
 
+-[ ] Commitar os arquivos iniciais 
+-[ ] Criação da Primeira Página 
+
 03/11/2023
 
--[ ] Criação da Primeira Página 
+-[ ] Buscar Layouts de Inspiração
+-[ ] Trabalhar da Primeira Página 
 
 04/11/2023
 
