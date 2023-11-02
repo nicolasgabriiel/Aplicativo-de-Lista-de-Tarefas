@@ -22,8 +22,8 @@ Desenvolvimento do Projeto:
 
 01/11/2023
 
--[ ] Sincronizar Projeto Físico na Nuvem GitHub
--[ ] Definir por cima as etapas dos projetos com definições diárias de Progresso
+-[x] Sincronizar Projeto Físico na Nuvem GitHub
+-[x] Definir por cima as etapas dos projetos com definições diárias de Progresso
 -[ ] Commitar os arquivos iniciais 
 -[ ] Buscar Layouts de Inspiração
 
@@ -39,11 +39,19 @@ Desenvolvimento do Projeto:
 
 05/11/2023
 
+-[ ] Criação da Segunda Página
+
 06/11/2023
+
+-[ ] Trabalhar na Segunda Página
 
 07/11/2023
 
+-[ ] Trabalhar na Segunda Página
+
 08/11/2023
+
+-[ ] Finalizar a Segunda Página
 
 09/11/2023
 
