@@ -18,7 +18,7 @@
 
 •	Implemente recursos de filtragem e ordenação para ajudar os usuários a organizar suas tarefas.
 
-Idéia de Design:
+# Idéia de Design:
 https://www.canva.com/design/DAFzAXafkVk/6wyTJ2HH6EeSd_14010zVw/edit?utm_content=DAFzAXafkVk&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
 Desenvolvimento do Projeto: 
@@ -32,7 +32,7 @@ Desenvolvimento do Projeto:
 
 02/11/2023
 
--[ ] Commitar os arquivos iniciais 
+-[x] Commitar os arquivos iniciais 
 -[ ] Criação da Primeira Página 
 
 03/11/2023
