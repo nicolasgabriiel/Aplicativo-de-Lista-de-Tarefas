@@ -33,10 +33,11 @@ Desenvolvimento do Projeto:
 02/11/2023
 
 -[x] Commitar os arquivos iniciais 
--[ ] Criação da Primeira Página 
+
 
 03/11/2023
 
+-[x] Criação da Primeira Página 
 -[ ] Buscar Layouts de Inspiração
 -[ ] Trabalhar da Primeira Página 
 
