@@ -1,6 +1,6 @@
 <template>
     <header>
-        <h1>Lista de Tarefas</h1>
+        <h1>TaskNest</h1>
     </header>
 </template>
 
@@ -10,3 +10,9 @@ export default defineComponent({
     name: 'Header-Component'
 })
 </script>
+
+<style>
+header h1{
+    font-family: agbalumo;
+}
+</style>

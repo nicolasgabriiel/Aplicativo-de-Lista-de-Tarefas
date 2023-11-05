@@ -1,5 +1,7 @@
 <template>
-    <footer>Footer</footer>
+    <footer>
+        <p>TaskNest todos os direitos reservados ©</p>
+    </footer>
 </template>
 
 <script lang="ts">
