@@ -1,5 +1,7 @@
 <template>
-    <header>Header</header>
+    <header>
+        <h1>Lista de Tarefas</h1>
+    </header>
 </template>
 
 <script lang="ts">

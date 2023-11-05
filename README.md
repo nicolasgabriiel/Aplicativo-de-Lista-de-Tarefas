@@ -38,12 +38,12 @@ Desenvolvimento do Projeto:
 03/11/2023
 
 -[x] Criação da Primeira Página 
--[ ] Buscar Layouts de Inspiração
--[ ] Trabalhar da Primeira Página 
 
 04/11/2023
 
+-[ ] Trabalhar da Primeira Página 
 -[ ] Criação do Componente Oculto da Primeira Pagina
+-[ ] Buscar Layouts de Inspiração
 
 05/11/2023
 
@@ -51,11 +51,11 @@ Desenvolvimento do Projeto:
 
 06/11/2023
 
--[ ] Trabalhar na Segunda Página
+-[ ] API RESTful
 
 07/11/2023
 
--[ ] Trabalhar na Segunda Página
+-[ ] filtragem
 
 08/11/2023
 
