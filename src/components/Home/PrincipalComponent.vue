@@ -1,15 +1,18 @@
 <template>
   <div>
     <section class="caixa-botao">
-      <button type="button" @click="telaOculta.mostrarTelaOculta" :disabled="!telaOculta.ocultar">Criar Nova Lista de
-        Tarefas</button>
+      <button type="button" @click="telaOculta.mostrarTelaOculta" :disabled="!telaOculta.ocultar">
+        <span>Criar Nova Lista de Tarefas</span>
+        
+        <img src="../../assets/adicionar-ficheiro.png">
+      </button>
     </section>
     <ul class="listas">
 
       <li v-for="(item, index) in listaDeTarefas.lista" :key="index">
         {{ item }}
-        <button @click="listaDeTarefas.removerLista(index)">Remover</button>
-        <button @click="editarLista(index)">Editar</button>
+        <button @click="listaDeTarefas.removerLista(index)" :disabled="!telaOculta.ocultar">Remover</button>
+        <button @click="editarLista(index)" :disabled="!telaOculta.ocultar">Editar</button>
       </li>
 
     </ul>
@@ -42,3 +45,33 @@ export default defineComponent({
   }
 })
 </script>
+
+<style>
+.caixa-botao button{
+  display: block;
+  margin: 50px auto;
+  background-color: #a0f46e;
+  border: none;
+  box-shadow: none;
+  border-radius: 10px;
+  transition: 0.2s;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 50px;
+}
+.caixa-botao button:hover{
+  cursor: pointer;
+ background-color: #84ea52;
+ scale: 1.02;
+}
+.caixa-botao button span{
+  font-size: 2em;
+
+}
+.caixa-botao button img{
+ width: 20px;
+ margin-left: 10px;
+
+}
+</style>

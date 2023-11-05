@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="home-page">
         <HeaderComponent/>
         <PrincipalComponent/>
         <AddComponent/>
@@ -28,3 +28,13 @@ export default defineComponent({
 
 })
 </script>
+
+<style>
+@import 'reset-css'; 
+.home-page{
+    min-height: 100vh;
+    width: 100%;
+    background-color:#bdff8a;
+    font-size: 12px;
+}
+</style>

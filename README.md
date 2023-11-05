@@ -21,6 +21,8 @@
 # Idéia de Design:
 https://www.canva.com/design/DAFzAXafkVk/6wyTJ2HH6EeSd_14010zVw/edit?utm_content=DAFzAXafkVk&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
+https://paletadecores.com/paleta/4ad41a/67df36/84ea52/a0f46e/bdff8a/
+
 Desenvolvimento do Projeto: 
 
 01/11/2023
@@ -41,9 +43,9 @@ Desenvolvimento do Projeto:
 
 04/11/2023
 
--[ ] Trabalhar da Primeira Página 
--[ ] Criação do Componente Oculto da Primeira Pagina
--[ ] Buscar Layouts de Inspiração
+-[x] Trabalhar da Primeira Página 
+-[x] Criação do Componente Oculto da Primeira Pagina
+-[x] Buscar Layouts de Inspiração
 
 05/11/2023
 

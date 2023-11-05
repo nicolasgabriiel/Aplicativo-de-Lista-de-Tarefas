@@ -1,6 +1,6 @@
 <template>
     <div class="box-tela-oculta" :class="{ hide: telaEdit.ocultar }">
-        <section>
+        <section class="box-interna">
             <h1>Gostaria de alterar o nome da sua lista?</h1>
             <form>
                 <input type="text" required v-model="listaDeTarefas.lista[listaDeTarefas.indice]"/>
@@ -46,10 +46,5 @@ export default defineComponent({
 .hide{
     display: none !important;
 }
-.box-tela-oculta{
- background-color: red;
-}
-.hide{
-    display: none !important;
-}
+
 </style>
