@@ -9,6 +9,7 @@
       <li v-for="(item, index) in listaDeTarefas.lista" :key="index">
         {{ item }}
         <button @click="listaDeTarefas.removerLista(index)">Remover</button>
+        <button @click="editarLista(index)">Editar</button>
       </li>
 
     </ul>
@@ -17,18 +18,27 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { useTelaOculta } from '../../store/index'
-import { useListaDeTarefas } from '../../store/index'
+import { useTelaEdit, useTelaOculta, useListaDeTarefas } from '../../store/index'
+
 
 export default defineComponent({
   name: 'Principal-Component',
   setup() {
     const telaOculta = useTelaOculta()
     const listaDeTarefas = useListaDeTarefas()
+    const telaEdit = useTelaEdit()
     return {
       telaOculta,
-      listaDeTarefas
+      listaDeTarefas,
+      telaEdit
     }
   },
+  methods:{
+    editarLista(index: number){
+      this.listaDeTarefas.indice = index
+      this.telaEdit.mostrarTelaEdit()
+
+    }
+  }
 })
 </script>

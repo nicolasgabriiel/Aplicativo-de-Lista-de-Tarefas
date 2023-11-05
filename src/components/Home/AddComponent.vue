@@ -12,8 +12,9 @@
 
 <script lang="ts">
 import {defineComponent} from 'vue'
-import { useTelaOculta } from '../../store/index'
-import { useListaDeTarefas } from '../../store/index'
+import { useTelaOculta, useListaDeTarefas } from '../../store/index'
+
+
 
 export default defineComponent({
     name: 'Add-Component',
@@ -22,7 +23,7 @@ export default defineComponent({
     const listaDeTarefas = useListaDeTarefas()
     return {
       telaOculta,
-      listaDeTarefas
+      listaDeTarefas,
     }
   },
   data(){
@@ -36,7 +37,7 @@ export default defineComponent({
         this.listaDeTarefas.adicionarLista(value)
         this.inputValue = ''
     }
-  }
+  },
 })
 </script>
 

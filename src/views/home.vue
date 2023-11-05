@@ -3,6 +3,7 @@
         <HeaderComponent/>
         <PrincipalComponent/>
         <AddComponent/>
+        <EditComponent/>
         <FooterComponent/>
     </div>
 </template>
@@ -13,15 +14,17 @@ import HeaderComponent from '@/components/Home/HeaderComponent.vue';
 import PrincipalComponent from '@/components/Home/PrincipalComponent.vue';
 import AddComponent from '@/components/Home/AddComponent.vue';
 import FooterComponent from '@/components/Home/FooterComponent.vue';
+import EditComponent from '@/components/Home/EditComponent.vue';
 
 export default defineComponent({
     name: 'Home-Page1',
     components:{
-        HeaderComponent,
-        PrincipalComponent,
-        AddComponent,
-        FooterComponent
-    }
+    HeaderComponent,
+    PrincipalComponent,
+    AddComponent,
+    FooterComponent,
+    EditComponent
+}
 
 })
 </script>
