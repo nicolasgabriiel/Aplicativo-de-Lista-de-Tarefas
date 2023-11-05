@@ -7,22 +7,26 @@ export const useTelaOculta = defineStore('tela', {
   actions:{
     mostrarTelaOculta(){
       this.ocultar = false
-      console.log(this.ocultar)
+      console.log('mostei')
     },
     ocultarTelaOculta(){
       this.ocultar = true
-      console.log(this.ocultar)
+      console.log('ocultei')
     }
   }
 })
 
-export const ListaDeTarefas = defineStore('lista',{
+export const useListaDeTarefas = defineStore('lista',{
   state: () => ({
-    lista: [],
+    lista: [] as string[],
   }),
   actions:{
-    adicionarLista(){
-      console.log('funcionando')
+    adicionarLista( value: string){
+      this.lista.push(value)
+      console.log(this.lista)
+    },
+    removerLista( index: number){
+      this.lista.splice(index, 1); // Remove o item pelo índice
     }
   }
 })
