@@ -18,8 +18,16 @@ export const useListaDeTarefas = defineStore('lista',{
   state: () => ({
     lista: [] as string[],
     indice: 0,
+    tarefas: [] as string []
   }),
-  actions:{
+  actions: {
+    adicionarTarefa(value: string ){
+      console.log(this.tarefas)
+      this.tarefas.push(value)
+    },
+    removerTarefa(index: number){
+      this.tarefas.splice(index, 1)
+    },
     adicionarLista( value: string){
       this.lista.push(value)
     },

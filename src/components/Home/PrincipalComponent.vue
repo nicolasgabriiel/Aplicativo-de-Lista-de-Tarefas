@@ -8,12 +8,13 @@
       </button>
     </section>
     <ul class="listas">
-
+    <RouterLink to="/list" class="router-link">
       <li v-for="(item, index) in listaDeTarefas.lista" :key="index">
         {{ item }}
         <button @click="editarLista(index)" :disabled="!disableButton"></button>
         <button  @click="listaDeTarefas.removerLista(index)" :disabled="!disableButton"></button>
       </li>
+     </RouterLink>
 
     </ul>
   </div>
@@ -136,6 +137,10 @@ export default defineComponent({
 }
 .listas li button:last-child{
   background-image: url(../../assets/lixo.png);
+}
+.router-link{
+  text-decoration: none;
+  color: black;
 }
 
 

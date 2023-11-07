@@ -1,6 +1,8 @@
 <template>
     <header>
+        <RouterLink to="/" class="router-link">
         <h1>TaskNest</h1>
+    </RouterLink>
         <div class="linha"></div>
     </header>
 </template>
@@ -28,5 +30,9 @@ header h1:hover{
     width: 100%;
     height: 1px;
     background-color:#a0f46e;
+}
+.router-link{
+  text-decoration: none;
+  color: black;
 }
 </style>
