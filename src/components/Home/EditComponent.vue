@@ -12,7 +12,7 @@
 
 <script lang="ts">
 import {defineComponent} from 'vue'
-import { useTelaEdit, useListaDeTarefas } from '../../store/index'
+import { useTelaEdit, useListaDeTarefas, useTelaOculta } from '../../store/index'
 
 
 
@@ -21,14 +21,16 @@ export default defineComponent({
     setup() {
     const listaDeTarefas = useListaDeTarefas()
     const telaEdit = useTelaEdit()
+    const telaOculta = useTelaOculta()
     return {
       listaDeTarefas,
-      telaEdit
+      telaEdit,
+      telaOculta
     }
   },
   data(){
     return{
-        inputValue: ''
+        inputValue: '',
     }
   },
   methods:{

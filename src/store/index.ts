@@ -7,11 +7,9 @@ export const useTelaOculta = defineStore('tela', {
   actions:{
     mostrarTelaOculta(){
       this.ocultar = false
-      console.log('mostei')
     },
     ocultarTelaOculta(){
       this.ocultar = true
-      console.log('ocultei')
     }
   }
 })
@@ -24,7 +22,6 @@ export const useListaDeTarefas = defineStore('lista',{
   actions:{
     adicionarLista( value: string){
       this.lista.push(value)
-      console.log(this.lista)
     },
     removerLista( index: number){
       this.lista.splice(index, 1); // Remove o item pelo índice
@@ -42,11 +39,9 @@ export const useTelaEdit = defineStore('edit', {
   actions:{
     mostrarTelaEdit(){
       this.ocultar = false
-      console.log('this.ocultar')
     },
     ocultarTelaEdit(){
       this.ocultar = true
-      console.log('ocultei')
     }
   }
 })

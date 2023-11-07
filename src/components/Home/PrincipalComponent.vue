@@ -1,7 +1,7 @@
 <template>
   <div>
     <section class="caixa-botao">
-      <button type="button" @click="telaOculta.mostrarTelaOculta" :disabled="!telaOculta.ocultar">
+      <button type="button" @click="telaOculta.mostrarTelaOculta" :disabled="!disableButton">
         <span>Criar Nova Lista de Tarefas</span>
         
         <img src="../../assets/adicionar-ficheiro.png">
@@ -11,8 +11,8 @@
 
       <li v-for="(item, index) in listaDeTarefas.lista" :key="index">
         {{ item }}
-        <button @click="listaDeTarefas.removerLista(index)" :disabled="!telaOculta.ocultar">Remover</button>
-        <button @click="editarLista(index)" :disabled="!telaOculta.ocultar">Editar</button>
+        <button @click="listaDeTarefas.removerLista(index)" :disabled="!disableButton">Remover</button>
+        <button @click="editarLista(index)" :disabled="!disableButton">Editar</button>
       </li>
 
     </ul>
@@ -41,8 +41,25 @@ export default defineComponent({
       this.listaDeTarefas.indice = index
       this.telaEdit.mostrarTelaEdit()
 
+    },
+    DisableButton(){
+      if(this.telaOculta.ocultar === false || this.telaEdit.ocultar === false ){
+            this.disableButton = false
+        }
+        else{
+          this.disableButton = true
+        }
     }
-  }
+  },
+  data(){
+    return{
+      disableButton: true
+    }
+  },
+  watch: {
+    'telaOculta.ocultar': 'DisableButton',
+    'telaEdit.ocultar': 'DisableButton',
+  },
 })
 </script>
 
