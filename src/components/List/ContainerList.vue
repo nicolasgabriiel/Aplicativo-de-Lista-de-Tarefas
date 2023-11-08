@@ -12,7 +12,8 @@
     </div>
     <form class="formulario">
         <input type="text" required placeholder="Qual a sua tarefa?" v-model="inputValue"/>
-        <button type="button" @click="adicionarTarefas(inputValue)" ></button>
+        <button type="button" @click="adicionarTarefas(inputValue, indice)" ></button>
+        <button @click="listaDeTarefas.teste" id='teste'>TESTE</button>
     </form>
   </div>
 </template>
@@ -38,9 +39,11 @@ export default defineComponent({
     }
   },
   methods:{
-    adicionarTarefas(value: string){
-      this.listaDeTarefas.adicionarTarefa(value),
+    adicionarTarefas(value: string, indice: number){
+      this.listaDeTarefas.adicionarTarefa(value, indice),
+      console.log('chamei a função')
       this.inputValue = ''
+      console.log(this.listaDeTarefas.tarefas)
     }
   }
 
@@ -48,6 +51,11 @@ export default defineComponent({
 </script>
 
 <style>
+#teste{
+  display: block;
+  font-size: 10em;
+  margin-top: 100px;
+}
 .container-geral{
   display: flex;
   flex-direction: column;

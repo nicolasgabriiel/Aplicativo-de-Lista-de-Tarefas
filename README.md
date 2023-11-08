@@ -12,8 +12,6 @@
 
 •	Use o Vuex para gerenciar o estado global do aplicativo, como a lista de tarefas.
 
-•	Integre o aplicativo com uma API RESTful para salvar e recuperar as tarefas.
-
 •	Adicione recursos de validação de formulário para garantir que as tarefas sejam inseridas corretamente.
 
 •	Implemente recursos de filtragem e ordenação para ajudar os usuários a organizar suas tarefas.
@@ -49,27 +47,34 @@ Desenvolvimento do Projeto:
 
 05/11/2023
 
--[ ] Criação da Segunda Página
+-[x] Criação da Segunda Página
 
 06/11/2023
 
--[ ] API RESTful
+-[ ]Criação de Segunda Página
+-[ ]Estilização
+-[ ]Funcionalidade Disable
 
 07/11/2023
 
+-[ ] Melhorar Lógica das listas
+-[ ] Validação de dados
 -[ ] filtragem
+-[ ] Melhorar Estilização
 
 08/11/2023
 
--[ ] Finalizar a Segunda Página
+-[ ] Finalização de recursos principais que faltam
+-[ ] Implementação de Responsividade 1/2
 
 09/11/2023
-
--[ ] Aplicar Responsivo na Página
+-[ ] Implementação de Responsividade 2/2
 
 10/11/2023
 
 -[ ] Testes de Funcionalidades
+-[ ] Criação de Readme e Post do Projeto
+
 
 
 
