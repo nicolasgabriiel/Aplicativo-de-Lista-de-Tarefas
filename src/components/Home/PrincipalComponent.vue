@@ -3,18 +3,21 @@
     <section class="caixa-botao">
       <button type="button" @click="telaOculta.mostrarTelaOculta" :disabled="!disableButton">
         <span>Criar Nova Lista de Tarefas</span>
-        
+
         <img src="../../assets/adicionar-ficheiro.png">
       </button>
     </section>
     <ul class="listas">
-    <RouterLink to="/list" class="router-link">
-      <li v-for="(item, index) in listaDeTarefas.lista" :key="index">
-        {{ item }}
-        <button @click="editarLista(index)" :disabled="!disableButton"></button>
-        <button  @click="listaDeTarefas.removerLista(index)" :disabled="!disableButton"></button>
+
+      <li v-for="(lista, index) in listaDeTarefas.listas" :key="index">
+        <RouterLink to="/list" class="router-link" >{{ lista.name }}</RouterLink>
+          
+        
+        <button class="button b1" @click="editarLista(index)" :disabled="!disableButton"></button>
+        <button  class="button b2" @click="listaDeTarefas.removerLista(index)" :disabled="!disableButton"></button>
       </li>
-     </RouterLink>
+
+
 
     </ul>
   </div>
@@ -37,23 +40,23 @@ export default defineComponent({
       telaEdit
     }
   },
-  methods:{
-    editarLista(index: number){
+  methods: {
+    editarLista(index: number) {
       this.listaDeTarefas.indice = index
       this.telaEdit.mostrarTelaEdit()
 
     },
-    DisableButton(){
-      if(this.telaOculta.ocultar === false || this.telaEdit.ocultar === false ){
-            this.disableButton = false
-        }
-        else{
-          this.disableButton = true
-        }
+    DisableButton() {
+      if (this.telaOculta.ocultar === false || this.telaEdit.ocultar === false) {
+        this.disableButton = false
+      }
+      else {
+        this.disableButton = true
+      }
     }
   },
-  data(){
-    return{
+  data() {
+    return {
       disableButton: true
     }
   },
@@ -65,7 +68,7 @@ export default defineComponent({
 </script>
 
 <style>
-.caixa-botao button{
+.caixa-botao button {
   display: block;
   margin: 50px auto;
   background-color: #a0f46e;
@@ -78,26 +81,31 @@ export default defineComponent({
   align-items: center;
   padding: 10px 50px;
 }
-.caixa-botao button:hover{
+
+.caixa-botao button:hover {
   cursor: pointer;
- background-color: #84ea52;
- scale: 1.02;
+  background-color: #84ea52;
+  scale: 1.02;
 }
-.caixa-botao button span{
+
+.caixa-botao button span {
   font-size: 2em;
 
 }
-.caixa-botao button img{
- width: 20px;
- margin-left: 10px;
+
+.caixa-botao button img {
+  width: 20px;
+  margin-left: 10px;
 
 }
-.listas{
+
+.listas {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.listas li{
+
+.listas li {
   background-color: #a0f46e;
   border: none;
   box-shadow: none;
@@ -111,12 +119,17 @@ export default defineComponent({
   margin-top: 20px;
 
 }
-.listas li:hover{
+
+.listas li:hover {
   cursor: pointer;
   background-color: #84ea52;
   scale: 1.01;
 }
-.listas li button{
+.router-link {
+  text-decoration: none;
+  color: black;
+}
+.listas li .button {
   background-color: transparent;
   border: none;
   box-shadow: none;
@@ -126,22 +139,19 @@ export default defineComponent({
   background-size: contain;
   transition: 0.2s;
   margin-left: 10px;
- 
+
 }
-.listas li button:hover{
+
+.listas li .button:hover {
   scale: 1.1;
 }
-.listas li button:first-child{
-  background-image: url(../../assets/editar.png);
 
+.b1 {
+  background-image: url(../../assets/editar.png);
 }
-.listas li button:last-child{
+
+.b2 {
   background-image: url(../../assets/lixo.png);
 }
-.router-link{
-  text-decoration: none;
-  color: black;
-}
-
 
 </style>

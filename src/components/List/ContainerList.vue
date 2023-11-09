@@ -1,19 +1,18 @@
 <template>
   <div class="container-geral">
-    <h1 >{{ listaDeTarefas.lista[listaDeTarefas.indice] }}</h1>
+    <h1 >{{ nomeDaLista}}</h1>
     <div>
         <ul class="tarefas">
           <div class="markdown"></div>
-            <li v-for="(item, index) in listaDeTarefas.tarefas" :key="index">
-        {{ item }}
-        <button  @click="listaDeTarefas.removerTarefa(index)"></button>
+            <li v-for="(tarefa, index) in listaDeTarefas.listas[indice].tarefas" :key="index">
+        {{ tarefa }}
+        <button  @click="listaDeTarefas.removerTarefa(index, index)"></button>
             </li>
         </ul>
     </div>
     <form class="formulario">
         <input type="text" required placeholder="Qual a sua tarefa?" v-model="inputValue"/>
-        <button type="button" @click="adicionarTarefas(inputValue, indice)" ></button>
-        <button @click="listaDeTarefas.teste" id='teste'>TESTE</button>
+        <button type="button" class='button-add' @click="adicionarTarefas(inputValue, indice)" ></button>
     </form>
   </div>
 </template>
@@ -33,7 +32,7 @@ export default defineComponent({
   },
   data(){
     return{
-        lista: [] as string[],
+        nomeDaLista: '',
         indice: 0,
         inputValue: ''
     }
@@ -43,19 +42,22 @@ export default defineComponent({
       this.listaDeTarefas.adicionarTarefa(value, indice),
       console.log('chamei a função')
       this.inputValue = ''
-      console.log(this.listaDeTarefas.tarefas)
+      console.log(this.listaDeTarefas.listas[this.indice].tarefas)
+    },
+    gerarNomeLista(){
+      console.log('executei a função')
+      this.nomeDaLista = this.listaDeTarefas.listas[this.listaDeTarefas.indice].name
     }
+  },
+  
+  watch:{
+    'listaDeTarefas.aviso' : 'gerarNomeLista'
   }
 
 })
 </script>
 
 <style>
-#teste{
-  display: block;
-  font-size: 10em;
-  margin-top: 100px;
-}
 .container-geral{
   display: flex;
   flex-direction: column;
@@ -89,7 +91,7 @@ export default defineComponent({
     border-radius: 10px;
     border: none;
 }
-.formulario button{
+.formulario .button-add{
   background-color: transparent;
   border: none;
   box-shadow: none;
@@ -100,7 +102,7 @@ export default defineComponent({
   transition: 0.2s;
   background-image: url(../../assets/botao-adicionar.png);
 }
-.formulario button:hover{
+.formulario .button-add:hover{
  scale: 1.03;
  background-color: white;
  border-radius: 13px;

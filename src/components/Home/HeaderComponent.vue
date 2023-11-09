@@ -2,6 +2,7 @@
     <header>
         <RouterLink to="/" class="router-link">
         <h1>TaskNest</h1>
+        <button @click="listaDeTarefas.teste" type="button">TESTE</button>
     </RouterLink>
         <div class="linha"></div>
     </header>
@@ -9,8 +10,18 @@
 
 <script lang="ts">
 import {defineComponent} from 'vue'
+import { useListaDeTarefas } from '@/store'
+
+
 export default defineComponent({
-    name: 'Header-Component'
+    name: 'Header-Component',
+    setup() {
+    const listaDeTarefas = useListaDeTarefas()
+    return {
+      listaDeTarefas,
+    }
+    
+}
 })
 </script>
 

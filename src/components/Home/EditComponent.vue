@@ -3,8 +3,8 @@
         <section class="box-interna">
             <h1>Gostaria de alterar o nome da sua lista?</h1>
             <form>
-                <input type="text" required v-model="listaDeTarefas.lista[listaDeTarefas.indice]"/>
-                <button type="button" @click="chamarFuncoes" >Alterar</button>
+                <input type="text" required v-model="inputValue"/>
+                <button type="button" @click="AlterarLista" >Alterar</button>
             </form>
         </section>
     </div>
@@ -17,7 +17,7 @@ import { useTelaEdit, useListaDeTarefas, useTelaOculta } from '../../store/index
 
 
 export default defineComponent({
-    name: 'Edit-Component',
+    name: 'Edit-Component-vue',
     setup() {
     const listaDeTarefas = useListaDeTarefas()
     const telaEdit = useTelaEdit()
@@ -34,12 +34,17 @@ export default defineComponent({
     }
   },
   methods:{
-    chamarFuncoes(){
-        this.inputValue = this.listaDeTarefas.lista[this.listaDeTarefas.indice]
+    AlterarLista(){
         this.listaDeTarefas.alterarLista(this.listaDeTarefas.indice, this.inputValue)
         this.telaEdit.ocultarTelaEdit()
         this.inputValue = ''
     },
+    VerificarNome(){
+      this.inputValue = this.listaDeTarefas.listas[this.listaDeTarefas.indice].name
+    }
+  },
+  watch: {
+    'telaEdit.ocultar': 'VerificarNome',
   },
 })
 </script>
