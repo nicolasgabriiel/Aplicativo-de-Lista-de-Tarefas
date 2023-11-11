@@ -10,7 +10,7 @@
     <ul class="listas">
 
       <li v-for="(lista, index) in listaDeTarefas.listas" :key="index">
-        <RouterLink to="/list" class="router-link" >{{ lista.name }}</RouterLink>
+        <RouterLink to="/list" class="router-link">{{ lista.name }}</RouterLink>
           
         
         <button class="button b1" @click="editarLista(index)" :disabled="!disableButton"></button>

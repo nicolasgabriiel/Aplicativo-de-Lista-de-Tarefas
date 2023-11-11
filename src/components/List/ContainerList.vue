@@ -4,9 +4,9 @@
     <div>
         <ul class="tarefas">
           <div class="markdown"></div>
-            <li v-for="(tarefa, index) in listaDeTarefas.listas[indice].tarefas" :key="index">
+            <li v-for="(tarefa, indexTarefa) in listaDeTarefas.listas[indice].tarefas" :key="indexTarefa">
         {{ tarefa }}
-        <button  @click="listaDeTarefas.removerTarefa(index, index)"></button>
+        <button  @click="listaDeTarefas.removerTarefa(indexTarefa)"></button>
             </li>
         </ul>
     </div>
@@ -44,15 +44,10 @@ export default defineComponent({
       this.inputValue = ''
       console.log(this.listaDeTarefas.listas[this.indice].tarefas)
     },
-    gerarNomeLista(){
-      console.log('executei a função')
-      this.nomeDaLista = this.listaDeTarefas.listas[this.listaDeTarefas.indice].name
-    }
   },
-  
-  watch:{
-    'listaDeTarefas.aviso' : 'gerarNomeLista'
-  }
+  mounted(){
+    this.nomeDaLista = this.listaDeTarefas.listas[this.listaDeTarefas.indice].name
+  },
 
 })
 </script>

@@ -4,18 +4,12 @@ export const useListaDeTarefas = defineStore('lista',{
   state: () => ({
     listas: [] as Array<{ name: string; tarefas: string[] }>,
     indice: 0,
-    aviso: true
   }),
   actions: {
       // this.listas.push({ name: 'NovaLista', tarefas: [] });
       // this.listas[0].tarefas.push('tarefa1')
     adicionarLista( value: string){
       this.listas.push({ name: value, tarefas: [] })
-      if(this.aviso === true){
-        this.aviso = false
-      }else{
-        this.aviso = true
-      }
     },
     removerLista( index: number){
       this.listas.splice(index, 1); // Remove o item pelo índice
@@ -26,8 +20,8 @@ export const useListaDeTarefas = defineStore('lista',{
     adicionarTarefa(value: string, index: number ){
       this.listas[index].tarefas.push(value)
     },
-    removerTarefa(index: number, indexTarefa: number){
-      this.listas[index].tarefas.splice(indexTarefa, 1)
+    removerTarefa(indexTarefa: number){
+      this.listas[this.indice].tarefas.splice(indexTarefa, 1)
     },
     teste(){
       this.listas.push({ name: 'lista', tarefas: [] })
